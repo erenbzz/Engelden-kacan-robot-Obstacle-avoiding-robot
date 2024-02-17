@@ -57,7 +57,7 @@ void setup() {
 void loop() 
 {
 
-  float t = 33;  //Sıcaklık için "t" isimli değişken tanımladık.
+  float t = dht11.readTemperature();  //Sıcaklık için "t" isimli değişken tanımladık.
 
   //Ses hızını sıcaklığa bağlı olarak güncelliyoruz.Formül "331√ 1+t/273" 
   float seshizi = 1 / (((sqrt((t / 273) + 1)) * 331) / 10000);
